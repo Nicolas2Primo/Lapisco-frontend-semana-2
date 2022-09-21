@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="/index.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-[#9EAADF]">
+    <div class="flex h-screen w-screen flex-col items-center justify-center">
+      <h1 class="py-8 text-3xl font-bold text-white">Calculadora BMI</h1>
+      <label class="flex w-[350px] flex-col gap-4 pb-4">
+        <input
+          id="height"
+          type="text"
+          class="h-[50px] rounded-2xl text-center shadow-[19px_22px_15px_-3px_rgba(0,0,0,0.1)] outline-none placeholder:text-center placeholder:text-sm focus:placeholder-transparent"
+          placeholder="Insira sua altura (cm):"
+        />
+        <input
+          id="weight"
+          type="text"
+          class="h-[50px] rounded-2xl text-center shadow-[19px_22px_15px_-3px_rgba(0,0,0,0.1)] outline-none placeholder:text-center placeholder:text-sm focus:placeholder-transparent"
+          placeholder="Insira seu peso (kg):"
+        />
+      </label>
+      <button
+        onclick="calculaImc()"
+        class="hover:drop-shadow-lg hover:bg-[#e2b449] h-14 w-48 rounded-xl bg-[#E8B94A] text-xl font-medium"
+      >
+        Calcular BMI
+      </button>
+      <div class="flex flex-col items-center justify-center pt-4 font-bold">
+        <p>BMI: <span id="imc"></span></p>
+        <p>Condição: <span id="condicao"></span></p>
+      </div>
+    </div>
+  </body>
+</html>
